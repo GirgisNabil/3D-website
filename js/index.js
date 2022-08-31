@@ -220,13 +220,13 @@ const geoPlan = new THREE.PlaneGeometry(4.13, 0.96);
 const boardGeomtry = new THREE.PlaneGeometry(5.5, 1.93);
 
 const boardMaterial = new THREE.MeshBasicMaterial({
-  map: textureLoader.load("/img/123123.jpg"),
+  map: textureLoader.load("https://girgisnabil.github.io/3D-website/img/123123.jpg"),
 });
 const boardMaterial2 = new THREE.MeshBasicMaterial({
-  map: textureLoader.load("/img/1212.jpg"),
+  map: textureLoader.load("https://girgisnabil.github.io/3D-website/img/1212.jpg"),
 });
 const boardMaterial3 = new THREE.MeshBasicMaterial({
-  map: textureLoader.load("/img/11.jpg"),
+  map: textureLoader.load("https://girgisnabil.github.io/3D-website/img/11.jpg"),
 });
 
 const plane1 = new THREE.Mesh(geoPlan, materialForAllPlanes);
