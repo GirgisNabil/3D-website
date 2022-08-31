@@ -125,18 +125,18 @@ window.addEventListener("resize", () => {
  */
 const textureLoader = new THREE.TextureLoader(loadingManager); //
 var Model = function () {
-  var mainbage = textureLoader.load("/models/pharma/tinified/front-last.jpg");
+  var mainbage = textureLoader.load("https://girgisnabil.github.io/3D-website/models/pharma/tinified/front-last.jpg");
   var bars = textureLoader.load(
-    "/models/pharma/tinified/front-last-pharma.jpg"
+    "https://girgisnabil.github.io/3D-website/models/pharma/tinified/front-last-pharma.jpg"
   );
   var glass = textureLoader.load(
-    "/models/pharma/tinified/double_faces_last_pharmacy.jpg"
+    "https://girgisnabil.github.io/3D-website/models/pharma/tinified/double_faces_last_pharmacy.jpg"
   );
   var glassandbars = textureLoader.load(
-    "/models/pharma/tinified/glass&bars.jpg"
+    "https://girgisnabil.github.io/3D-website/models/pharma/tinified/glass&bars.jpg"
   );
-  var Lap = textureLoader.load("/models/pharma/tinified/extenstion.jpg");
-  var Lapv2 = textureLoader.load("/models/Lap/laplast3.jpg");
+  var Lap = textureLoader.load("https://girgisnabil.github.io/3D-website/models/pharma/tinified/extenstion.jpg");
+  var Lapv2 = textureLoader.load("https://girgisnabil.github.io/3D-website/models/Lap/laplast3.jpg");
 
   mainbage.flipY = false;
   bars.flipY = false;
@@ -162,36 +162,36 @@ var Model = function () {
   scene.add(maingroup);
 
   const draco = new DRACOLoader();
-  draco.setDecoderPath("/draco/");
+  draco.setDecoderPath("https://girgisnabil.github.io/3D-website/draco/");
   const gltfLoader = new GLTFLoader(loadingManager); //loadingManager
   gltfLoader.setDRACOLoader(draco);
 
-  gltfLoader.load("/models/pharma/base.glb", (gltf) => {
+  gltfLoader.load("https://girgisnabil.github.io/3D-website/models/pharma/base.glb", (gltf) => {
     gltf.scene.traverse((child) => {
       child.material = mainbagebacked;
     });
     maingroup.add(gltf.scene);
-    gltfLoader.load("/models/pharma/front.glb", (gltf) => {
+    gltfLoader.load("https://girgisnabil.github.io/3D-website/models/pharma/front.glb", (gltf) => {
       gltf.scene.traverse((child) => {
         child.material = barsbacked;
       });
       maingroup.add(gltf.scene);
-      gltfLoader.load("/models/pharma/left-right-base.glb", (gltf) => {
+      gltfLoader.load("https://girgisnabil.github.io/3D-website/models/pharma/left-right-base.glb", (gltf) => {
         gltf.scene.traverse((child) => {
           child.material = glassbacked;
         });
         maingroup.add(gltf.scene);
-        gltfLoader.load("/models/pharma/glassandbars.glb", (gltf) => {
+        gltfLoader.load("https://girgisnabil.github.io/3D-website/models/pharma/glassandbars.glb", (gltf) => {
           gltf.scene.traverse((child) => {
             child.material = glassandbarss;
           });
           maingroup.add(gltf.scene);
-          gltfLoader.load("/models/pharma/extenstion.glb", (gltf) => {
+          gltfLoader.load("https://girgisnabil.github.io/3D-website/models/pharma/extenstion.glb", (gltf) => {
             gltf.scene.traverse((child) => {
               child.material = Lapmaterial;
             });
             maingroup.add(gltf.scene);
-            gltfLoader.load("/models/Lap/Lap-last3.glb", (gltf) => {
+            gltfLoader.load("https://girgisnabil.github.io/3D-website/models/Lap/Lap-last3.glb", (gltf) => {
               gltf.scene.traverse((child) => {
                 child.material = Lapmaterialv2;
               });
